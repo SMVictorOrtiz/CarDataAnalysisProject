@@ -7,13 +7,13 @@ car_data = pd.read_csv('vehicles_us.csv')
 st.header('Visualizador de datos')
 st.dataframe(car_data)
 
-if st.checkbox("Filtrar fabricantes con menos de 1000 registros"):
+if st.checkbox("Filtrar modelos antes del 2010"):
     # Contar el número de ocurrencias por fabricante
-    manufacturer_counts = car_data['manufacturer'].value_counts()
+    year_counts = car_data['model_year'].value_counts()
     # Filtrar fabricantes con menos de 1000 registros
-    filtered_manufacturers = manufacturer_counts[manufacturer_counts < 1000].index
+    filtered_manufacturers = year_counts[year_counts < 2010].index
     # Filtrar el DataFrame
-    data = car_data[~car_data['manufacturer'].isin(filtered_manufacturers)]
+    data = car_data[~car_data['model_year'].isin(filtered_manufacturers)]
 
 hist_button = st.button('Construir histograma')
 if hist_button: # al hacer clic en el botón
