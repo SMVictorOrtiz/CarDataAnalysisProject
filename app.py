@@ -11,7 +11,8 @@ if st.checkbox("Filtrar modelos antes del 2010"):
     year_counts = car_data['model_year'].value_counts()
     filtered_manufacturers = year_counts[year_counts < 2010].index
     car_data = car_data[~car_data['model_year'].isin(filtered_manufacturers)]
-
+    st.dataFrame(car_data)
+    
 hist_button = st.button('Construir histograma')
 if hist_button: 
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
