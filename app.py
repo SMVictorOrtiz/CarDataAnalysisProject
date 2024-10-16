@@ -26,7 +26,7 @@ if hist_button: # al hacer clic en el botón
             # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
 
-fig = px.scatter(data, 
+fig = px.scatter(car_data, 
                  x='odometer', 
                  y='price', 
                  color='fuel', 
@@ -38,4 +38,4 @@ st.plotly_chart(fig)
 
 # Mostrar estadísticas básicas de los datos
 st.write("Estadísticas básicas:")
-st.write(data.describe())
+st.write(car_data.describe())
