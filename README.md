@@ -32,3 +32,32 @@ El dataset utilizado corresponde a anuncios de venta de automóviles en EE.UU., 
 
 Incluye información como precio, kilometraje, modelo, año, condición, tipo de transmisión y combustible
 
+---
+
+## Instalación y ejecución
+
+Sigue estos pasos para ejecutar el proyecto en tu máquina local:
+
+1. Clona este repositorio y accede a la carpeta:
+   ```bash
+   git clone https://github.com/SMVictorOrtiz/CarDataAnalysisProject.git
+   cd CarDataAnalysisProject
+
+2. (Opcional, pero recomendado) Crea y activa un entorno virtual:
+
+  # macOS / Linux
+  python3 -m venv .venv
+  source .venv/bin/activate
+
+  # Windows (PowerShell)
+  python -m venv .venv
+  .venv\Scripts\Activate.ps1
+
+3. Instala las dependencias necesarias:
+   pip install -r requirements.txt
+   
+4. Ejecuta la aplicación con Streamlit:
+   streamlit run app.py
+
+5. Abre en tu navegador la dirección que aparece en la terminal (por defecto):
+  http://localhost:8501/
